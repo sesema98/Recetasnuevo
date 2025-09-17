@@ -25,4 +25,7 @@ Activar el entorno virtual usando python -m venv nombre_del_entorno_virtual acti
 
 ![Uploading image.png…]()
 
+SERVA MARIÑO SERGIO SEBASTIAN 
+
+
 
