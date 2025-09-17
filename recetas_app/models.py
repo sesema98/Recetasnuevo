@@ -7,6 +7,7 @@ class Categoria(models.Model):
         return self.nombre
 
 class Receta(models.Model):
+    
     nombre = models.CharField(max_length=200)
     ingredientes = models.TextField(help_text="Lista de ingredientes (uno por línea o separada por comas)")
     tiempo_minutos = models.PositiveIntegerField(verbose_name="Tiempo (minutos)")
