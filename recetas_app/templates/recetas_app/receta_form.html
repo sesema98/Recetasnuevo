@@ -1,0 +1,11 @@
+﻿{% extends "recetas_app/base.html" %}
+{% block contenido %}
+<h1>{{ accion }}</h1>
+<form method="post" class="card card-body">{% csrf_token %}
+  {{ form.as_p }}
+  <div class="mt-2">
+    <a class="btn btn-secondary" href="{% url 'recetas_app:receta_list' %}">Volver</a>
+    <button class="btn btn-primary" type="submit">Guardar</button>
+  </div>
+</form>
+{% endblock %}

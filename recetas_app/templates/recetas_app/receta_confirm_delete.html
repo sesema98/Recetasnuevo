@@ -1,0 +1,9 @@
+﻿{% extends "recetas_app/base.html" %}
+{% block contenido %}
+<h1>Eliminar Receta</h1>
+<p>¿Seguro que deseas eliminar <strong>{{ receta }}</strong>?</p>
+<form method="post">{% csrf_token %}
+  <a class="btn btn-secondary" href="{% url 'recetas_app:receta_list' %}">Cancelar</a>
+  <button class="btn btn-danger" type="submit">Eliminar</button>
+</form>
+{% endblock %}

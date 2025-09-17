@@ -1,0 +1,38 @@
+﻿{% extends "recetas_app/base.html" %}
+{% block contenido %}
+<div class="d-flex justify-content-between align-items-center mb-3">
+  <h1>Categorías</h1>
+  <a class="btn btn-primary" href="{% url 'recetas_app:categoria_create' %}">+ Nueva Categoría</a>
+</div>
+<div class="row">
+  {% if detalle %}
+    <div class="col-12">
+      <h3>Recetas en la categoría: {{ categorias.0.nombre }}</h3>
+      <ul>
+        {% for r in recetas %}
+          <li>{{ r.nombre }} - {{ r.tiempo_minutos }} min</li>
+        {% empty %}
+          <li>No hay recetas.</li>
+        {% endfor %}
+      </ul>
+      <a class="btn btn-secondary" href="{% url 'recetas_app:categoria_list' %}">Volver a categorías</a>
+    </div>
+  {% else %}
+    {% for c in categorias %}
+      <div class="col-md-4 mb-3">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5><a href="{% url 'recetas_app:categoria_detail' c.pk %}">{{ c.nombre }}</a></h5>
+          </div>
+          <div class="card-footer">
+            <a class="btn btn-sm btn-warning" href="{% url 'recetas_app:categoria_update' c.pk %}">Editar</a>
+            <a class="btn btn-sm btn-danger" href="{% url 'recetas_app:categoria_delete' c.pk %}">Eliminar</a>
+          </div>
+        </div>
+      </div>
+    {% empty %}
+      <p>No hay categorías.</p>
+    {% endfor %}
+  {% endif %}
+</div>
+{% endblock %}
