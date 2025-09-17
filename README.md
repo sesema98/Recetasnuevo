@@ -23,9 +23,11 @@ Activar el entorno virtual usando python -m venv nombre_del_entorno_virtual acti
 
 <img width="1042" height="725" alt="image" src="https://github.com/user-attachments/assets/bce7e097-df4d-4c96-9840-7f389758d87c" />
 
-![Uploading image.png…]()
+<img width="897" height="782" alt="image" src="https://github.com/user-attachments/assets/b0fc160f-8910-435a-aba1-ced77d8fe9d8" />
+
 
 SERVA MARIÑO SERGIO SEBASTIAN 
+
 
 
 
